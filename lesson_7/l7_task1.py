@@ -21,6 +21,7 @@ class InsufccicientFundsError(Exception):
     def __init__(self, message=None):
         super().__init__(message)
 
+
 class Bank:
     __accounts_dict = {}
 
@@ -50,9 +51,10 @@ class BankAccount:
         self.__balance = balance
 
     def get_info(self):
-        return {"id": self.__accountNumber,
-                "name": self.__ownerName
-            }
+        return {
+            "id": self.__accountNumber,
+            "name": self.__ownerName
+        }
 
     def get_balance(self):
         return self.__balance
